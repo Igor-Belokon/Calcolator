@@ -1,7 +1,11 @@
 import React from "react";
 
-class InputArea extends React.Component {
+export class InputArea extends React.Component {
   render() {
-    return <div></div>;
+    return (
+      <div>
+        <input></input>
+      </div>
+    );
   }
 }

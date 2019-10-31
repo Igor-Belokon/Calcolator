@@ -1,7 +1,17 @@
 import React from "react";
+import { InputArea } from "./input/input.js";
 
-class Reg extends React.Component {
+export class Reg extends React.Component {
   render() {
-    return <div></div>;
+    return (
+      <div>
+        <InputArea></InputArea>
+        <InputArea></InputArea>
+        <InputArea></InputArea>
+        <InputArea></InputArea>
+        <InputArea></InputArea>
+        <InputArea></InputArea>
+      </div>
+    );
   }
 }

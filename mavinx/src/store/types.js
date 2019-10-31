@@ -1,9 +1,15 @@
 export const successAction = type => `${type}_SUCCESS`;
 export const failureAction = type => `${type}_FAILED`;
 
-export const GET_DATA = "GET_DATA";
+export const USER_NAME = "USER_NAME";
+export const USER_SURNAME = "USER_SURNAME;
+export const NAME_COSTUMER = "NAME_COSTUMER";
+export const USER_EMAIL= "USER_EMAIL";
+export const USER_PHONE = "USER_PHONE";
+export const USER_ROLE = "USER_ROLE";
+export const USER_PASSWORD = "USER_PASSWORD";
+export const USER_PASSWORD_CONFIRM = "USER_PASSWORD_CONFIRM";
 
 export const ItemTypes = {
-  DATA: "data"
+  CARDS: "cards"
 };
-//
