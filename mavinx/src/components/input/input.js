@@ -1,6 +1,6 @@
 import React from "react";
 
-class login extends React.Component {
+class InputArea extends React.Component {
   render() {
     return <div></div>;
   }
