@@ -1,10 +1,10 @@
 import React from "react";
-import { Reg } from "./components/registration/reg";
+import Signup from "./components/registration/reg";
 
 function App() {
   return (
     <div>
-      <Reg></Reg>
+      <Signup></Signup>
     </div>
   );
 }

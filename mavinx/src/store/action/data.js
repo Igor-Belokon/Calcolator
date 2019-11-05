@@ -1,8 +1,15 @@
-import { GET_DATA, successAction, failureAction } from "../types";
-export function loadCards(id) {
+import { USER_LOGIN, successAction, failureAction } from "../types";
+export function loginUser(card) {
   return dispatch =>
-    fetch(`https://smida-dev.test.idoc.com.ua/api/registry/okpoCard?code=${id}`) // Redux Thunk handles these
+    fetch("http://68.183.119.148/api/test/login", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(card)
+    }) // Redux Thunk handles these
       .then(res => res.json())
-      .then(data => dispatch({ type: successAction(GET_DATA), data }))
-      .catch(err => dispatch({ type: failureAction(GET_DATA), err }));
+      .then(data => dispatch({ type: successAction(USER_LOGIN), data }))
+      .catch(err => dispatch({ type: failureAction(USER_LOGIN), err }));
 }
