@@ -10,6 +10,7 @@ export const USER_ROLE = "USER_ROLE";
 export const USER_PASSWORD = "USER_PASSWORD";
 
 export const USER_LOGIN = "USER_LOGIN";
+export const USER_REG = "USER_REG";
 
 export const ItemTypes = {
   DATA: "data"

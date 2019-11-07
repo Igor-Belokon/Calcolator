@@ -1,4 +1,3 @@
-export const getData = state => state.blocks.data;
-export 
+export const getUser = state => state.user.data;
 
 //

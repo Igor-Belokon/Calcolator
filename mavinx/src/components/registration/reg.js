@@ -2,7 +2,11 @@ import React from "react";
 
 import { connect } from "react-redux";
 
-class Signup extends React.Component {
+import { Redirect } from "react-router-dom";
+
+import { regUser } from "../../store/action/data";
+
+class Reg extends React.Component {
   state = {
     username: "",
     password: "",
@@ -11,7 +15,8 @@ class Signup extends React.Component {
     phone: "",
     email: "",
     role: "",
-    password_confirmation: ""
+    password_confirmation: "",
+    registered: false
   };
 
   handleChange = event => {
@@ -19,8 +24,28 @@ class Signup extends React.Component {
       [event.target.name]: event.target.value
     });
   };
+  userReg = () => {
+    const user = {
+      username: this.state.username,
+      email: this.state.email,
+      password: this.state.password,
+      password_confirmation: this.state.password_confirmation,
+      phone: this.state.phone,
+      surname: this.state.surname,
+      name_customer: this.state.name_customer,
+      role: this.state.role
+    };
+    this.props.regUser(user);
+    this.setState({ registered: true });
+  };
 
   render() {
+    const { registered } = this.state;
+
+    if (registered) {
+      return <Redirect to="/login" />;
+    }
+
     return (
       <form onSubmit={this.handleSubmit}>
         <h1>Sign Up For An Account</h1>
@@ -100,10 +125,13 @@ class Signup extends React.Component {
           onChange={this.handleChange}
         />
         <br />
-        <input type="submit" />
+        <button onClick={this.userReg}></button>
       </form>
     );
   }
 }
 
-export default connect()(Signup);
+export default connect(
+  null,
+  { regUser }
+)(Reg);
