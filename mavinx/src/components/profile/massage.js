@@ -15,7 +15,7 @@ export default class Message extends React.Component {
           </p>
           <p>#lending-page #Логотип #Промо-сайт</p>
         </div>
-        <div>
+        <div className="price">
           <h4>1 800$</h4>
           <p>1-2 месяца</p>
         </div>

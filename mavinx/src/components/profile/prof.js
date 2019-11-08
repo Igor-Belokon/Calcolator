@@ -21,32 +21,38 @@ export default class MainForm extends React.Component {
     return (
       <div>
         <div className="flex-container">
-          <div>Exprts</div>
-          <input placeholder="Search"></input>
-          <div>Експерты</div>
-          <div>Вопросы</div>
-          <div>О нас</div>
-          <div>Создать проект</div>
+          <div className="header header-text">Exprts</div>
+          <input placeholder="Search" className="find "></input>
+          <div className="header">Експерты</div>
+          <div className="header">Вопросы</div>
+          <div className="header">О нас</div>
+          <div className="header header-text1">Создать проект</div>
           <div>
-            <button onClick={this.onProf}></button>
+            <button className="header" onClick={this.onProf}>
+              )(
+            </button>
           </div>
         </div>
         <div className="filter-found">
           <div className="filter">
             <div className="head">
-              <h5>Фильтры</h5>
-              <h5>Очистить</h5>
+              <h6>Фильтры</h6>
+              <h6>Очистить</h6>
             </div>
             <div>
               <h6>Категории</h6>
-              <div className="head">
-                <input></input>
+              <div className="head filter-search ">
+                <input placeholder="Search" className="find2 "></input>
                 <p>+</p>
               </div>
-              <div>#Логотип</div>
-              <div>#lending-page</div>
-              <div>#Промо-сайт</div>
-              <div>✖</div>
+              <div className="head">
+                <div className="filter-content">#Логотип</div>
+                <div className="filter-content">#lending-page</div>
+              </div>
+              <div className="head">
+                <div className="filter-content">#Промо-сайт</div>
+                <div className="filter-content">✖</div>
+              </div>
             </div>
             <div>
               <h6>Стоимость</h6>

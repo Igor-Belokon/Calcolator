@@ -1,85 +1,79 @@
 .flex-container {
   display: flex;
   width: 100%;
-  background-color: rgba(255, 235, 205, 0.514);
+  height: 45px;
+  justify-content: space-around;
+  background-color: rgba(212, 212, 212, 0.466);
+}
+.find {
+  width: 300px;
+  height: 30px;
+  border: none;
+  outline: none;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0);
+}
+.header {
+  margin: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.header-text {
+  border-right: 1px rgba(146, 146, 146, 0.651) solid;
+}
+.header-text1 {
+  border-right: 1px rgba(146, 146, 146, 0.651) solid;
+  border-left: 1px rgba(146, 146, 146, 0.651) solid;
 }
 .message {
   display: flex;
+  background-color: rgba(192, 192, 192, 0.74);
+  padding: 20px;
+  border-bottom: 1px rgba(146, 146, 146, 0.651) solid;
+}
+.price {
+  border-left: 1px rgba(146, 146, 146, 0.651) solid;
+  margin: 10px;
+  padding: 10px;
 }
 .search {
   display: flex;
 }
-.price-bar {
-  width: 450px;
-  height: 300px;
-  font-size: 16px;
-  font-family: "Tahoma", sans-serif;
-  color: black;
-}
-.range-filter {
-  padding-top: 10px;
-  width: 240px;
-  margin: auto;
-  margin-bottom: 10px;
-}
-.range-controls {
-  position: relative;
-  height: 80px;
-  margin-bottom: 15px;
-  padding: 0 30px;
-  background: #34495e;
-  border-radius: 5px;
-  overflow: hidden;
-}
-.scale {
-  margin-top: 39px;
-  height: 2px;
-  background: #d7dcde;
-}
-.bar {
-  margin-left: 50px;
-  width: 100px;
-  height: 2px;
-  background: #00ca74;
-}
-.toggle {
-  position: absolute;
-  top: 30px;
-  left: 30px;
-  width: 4px;
-  height: 4px;
-  border: 8px solid white;
-  background: #ababab;
-  cursor: pointer;
-  border-radius: 50%;
-}
-.min-toggle {
-  left: 70px;
-}
-.max-toggle {
-  left: 165px;
-}
-.price-controls input {
-  width: 55px;
-  padding: 8px 10px;
-  margin-left: 10px;
-  border: none;
-  background: #34495e;
-  font-size: 16px;
-  font-family: "Tahoma", sans-serif;
-  text-align: center;
-  color: #283136;
-  border-radius: 5px;
-  color: white;
-}
 
-.min-price {
-  margin-right: 14px;
-}
 .filter-found {
   display: flex;
-  background-color: rgba(157, 168, 168, 0.753);
+  background-color: rgba(200, 201, 201, 0.678);
+  padding: 10px;
 }
 .head {
   display: flex;
+  justify-content: space-between;
+}
+.filter {
+  margin: 10px;
+  padding: 10px;
+  border-right: 1px rgba(146, 146, 146, 0.651) solid;
+}
+.found {
+  margin: 10px;
+}
+.find2 {
+  width: 150px;
+  height: 30px;
+  border: none;
+  outline: none;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0);
+}
+.filter-content {
+  background-color: rgba(192, 192, 192, 0.74);
+  border-radius: 20px;
+  margin: 5px;
+  padding: 4px;
+}
+.filter-search {
+  padding: 5px;
+  height: 45px;
+  border-radius: 10px;
+  background-color: rgba(192, 192, 192, 0.74);
 }
