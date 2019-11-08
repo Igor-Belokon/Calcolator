@@ -14,18 +14,11 @@ export function loginUser(user) {
 
       .catch(err => dispatch({ type: failureAction(USER_LOGIN), err }));
 }
-export function regUser(card) {
+export function regUser(user) {
   return dispatch =>
-    fetch("http://68.183.119.148/api/test/register", {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(card)
-    }) // Redux Thunk handles these
-      .then(res => res.json())
-      .then(data => dispatch({ type: successAction(USER_REG), data }))
+    instance
+      .post("http://68.183.119.148/api/test/register", user)
+
       .catch(err => dispatch({ type: failureAction(USER_REG), err }));
 }
 export function editUser(user) {

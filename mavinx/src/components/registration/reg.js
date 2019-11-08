@@ -1,4 +1,5 @@
 import React from "react";
+import "../style.css";
 
 import { connect } from "react-redux";
 
@@ -35,8 +36,7 @@ class Reg extends React.Component {
       name_customer: this.state.name_customer,
       role: this.state.role
     };
-    this.props.regUser(user);
-    this.setState({ registered: true });
+    this.props.regUser(user).then(() => this.setState({ registered: true }));
   };
 
   render() {
@@ -47,86 +47,87 @@ class Reg extends React.Component {
     }
 
     return (
-      <form onSubmit={this.handleSubmit}>
-        <h1>Sign Up For An Account</h1>
+      <div className="reg1">
+        <div className="reg-form">
+          <h1>Registration</h1>
+          <div className="reg2">
+            <label>Username</label>
+            <label>Surname</label>
+            <label>Name customer </label>
+            <label>phone</label>
+            <label>email</label>
+            <label>role</label>
+            <label>Password</label>
+            <label>Password confirm</label>
+          </div>
+          <div className="reg2">
+            <input
+              type="username"
+              name="username"
+              placeholder="Username"
+              value={this.state.username}
+              onChange={this.handleChange}
+            />
 
-        <label>Username</label>
-        <input
-          type="username"
-          name="username"
-          placeholder="Username"
-          value={this.state.username}
-          onChange={this.handleChange}
-        />
-        <br />
+            <input
+              type="surname"
+              name="surname"
+              placeholder="Surname"
+              value={this.state.surname}
+              onChange={this.handleChange}
+            />
 
-        <label>Surname</label>
-        <input
-          type="surname"
-          name="surname"
-          placeholder="Surname"
-          value={this.state.surname}
-          onChange={this.handleChange}
-        />
-        <br />
+            <input
+              type="name_customer"
+              name="name_customer"
+              placeholder="name_customer"
+              value={this.state.name_customer}
+              onChange={this.handleChange}
+            />
 
-        <label>Name customer </label>
-        <input
-          type="name_customer"
-          name="name_customer"
-          placeholder="name_customer"
-          value={this.state.name_customer}
-          onChange={this.handleChange}
-        />
-        <br />
-        <label>phone</label>
-        <input
-          type="phone"
-          name="phone"
-          placeholder="phone"
-          value={this.state.phone}
-          onChange={this.handleChange}
-        />
-        <br />
+            <input
+              type="phone"
+              name="phone"
+              placeholder="phone"
+              value={this.state.phone}
+              onChange={this.handleChange}
+            />
 
-        <label>email</label>
-        <input
-          type="email"
-          name="email"
-          placeholder="email"
-          value={this.state.email}
-          onChange={this.handleChange}
-        />
-        <br />
-        <label>role</label>
-        <input
-          type="role"
-          name="role"
-          placeholder="role"
-          value={this.state.role}
-          onChange={this.handleChange}
-        />
-        <br />
-        <label>Password</label>
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          value={this.state.password}
-          onChange={this.handleChange}
-        />
-        <br />
-        <label>password_confirmation</label>
-        <input
-          type="password_confirmation"
-          name="password_confirmation"
-          placeholder="password_confirmation"
-          value={this.state.password_confirmation}
-          onChange={this.handleChange}
-        />
-        <br />
-        <button onClick={this.userReg}></button>
-      </form>
+            <input
+              type="email"
+              name="email"
+              placeholder="email"
+              value={this.state.email}
+              onChange={this.handleChange}
+            />
+
+            <input
+              type="role"
+              name="role"
+              placeholder="role"
+              value={this.state.role}
+              onChange={this.handleChange}
+            />
+
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              value={this.state.password}
+              onChange={this.handleChange}
+            />
+
+            <input
+              type="password_confirmation"
+              name="password_confirmation"
+              placeholder="password_confirmation"
+              value={this.state.password_confirmation}
+              onChange={this.handleChange}
+            />
+          </div>
+          <button onClick={this.userReg}>Registration</button>
+        </div>
+      </div>
     );
   }
 }

@@ -26,8 +26,9 @@ function App() {
       <Provider store={store}>
         <Router>
           <div>
-            <Reg></Reg>
+            <Login></Login>
             <Route path="/public" component={MainForm} />
+            <Route path="/reg" component={MainForm} />
             <Route path="/login" component={Login} />
             <PrivateRoute path="/protected" component={Edit} />
           </div>
