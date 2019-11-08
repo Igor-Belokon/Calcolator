@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import "../style.css";
 
 import { editUser } from "../../store/action/data";
 
@@ -32,46 +33,46 @@ export class Edit extends React.Component {
 
   render() {
     return (
-      <div>
-        <label>Username</label>
-        <input
-          type="username"
-          name="username"
-          placeholder={this.state.username}
-          value={this.state.username}
-          onChange={this.handleChange}
-        />
-        <br />
+      <div className="reg1">
+        <div className="reg-form">
+          <div className="reg2">
+            <label>Username</label> <label>Surname</label>{" "}
+            <label>Name customer </label> <label>role</label>
+          </div>
+          <div className="reg2">
+            <input
+              type="username"
+              name="username"
+              placeholder={this.state.username}
+              value={this.state.username}
+              onChange={this.handleChange}
+            />
+            <input
+              type="surname"
+              name="surname"
+              placeholder={this.state.surname}
+              value={this.state.surname}
+              onChange={this.handleChange}
+            />
 
-        <label>Surname</label>
-        <input
-          type="surname"
-          name="surname"
-          placeholder={this.state.surname}
-          value={this.state.surname}
-          onChange={this.handleChange}
-        />
-        <br />
+            <input
+              type="name_customer"
+              name="name_customer"
+              placeholder={this.state.name_customer}
+              value={this.state.name_customer}
+              onChange={this.handleChange}
+            />
 
-        <label>Name customer </label>
-        <input
-          type="name_customer"
-          name="name_customer"
-          placeholder={this.state.name_customer}
-          value={this.state.name_customer}
-          onChange={this.handleChange}
-        />
-        <br />
-        <label>role</label>
-        <input
-          type="role"
-          name="role"
-          placeholder={this.state.role}
-          value={this.state.role}
-          onChange={this.handleChange}
-        />
-        <br />
-        <button onClick={this.userEdit}></button>
+            <input
+              type="role"
+              name="role"
+              placeholder={this.state.role}
+              value={this.state.role}
+              onChange={this.handleChange}
+            />
+          </div>
+          <button onClick={this.userEdit}></button>
+        </div>
       </div>
     );
   }

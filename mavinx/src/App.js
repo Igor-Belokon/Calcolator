@@ -28,7 +28,7 @@ function App() {
           <div>
             <Login></Login>
             <Route path="/public" component={MainForm} />
-            <Route path="/reg" component={MainForm} />
+            <Route path="/reg" component={Reg} />
             <Route path="/login" component={Login} />
             <PrivateRoute path="/protected" component={Edit} />
           </div>
