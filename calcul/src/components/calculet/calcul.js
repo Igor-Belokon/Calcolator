@@ -3,13 +3,7 @@ import "../style.css";
 
 import { connect } from "react-redux";
 
-import {
-  getAnswers,
-  sumOp,
-  divideOp,
-  remainderOp,
-  highestOp
-} from "../../store/action/data";
+import { getAnswers } from "../../store/action/data";
 
 import { getAnswer } from "../../store/selectors/selectors";
 
@@ -104,9 +98,5 @@ function mapStateToProps(state) {
   return { answers: getAnswer(state) };
 }
 export default connect(mapStateToProps, {
-  getAnswers,
-  sumOp,
-  divideOp,
-  remainderOp,
-  highestOp
+  getAnswers
 })(Calculator);
