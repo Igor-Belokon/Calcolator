@@ -1,11 +1,11 @@
-import { USER_LOGIN, successAction, failureAction } from "../types";
+import { ANSWER_REG, successAction } from "../types";
 const initialState = {
   data: []
 };
 
-export default function User(state = initialState, action) {
+export default function Answer(state = initialState, action) {
   switch (action.type) {
-    case successAction(USER_LOGIN):
+    case successAction(ANSWER_REG):
       console.log(action);
       return {
         ...state,
