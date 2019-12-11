@@ -93,7 +93,7 @@ class Calculator extends React.Component {
               Highest prime number between A and B if available
             </button>
           </div>
-          <button onClick={this.answer}>Calculeit</button>
+          <button onClick={this.answer}>Calculator</button>
         </div>
         <div className="sameData">Answer history {this.props.answers} </div>
       </div>
